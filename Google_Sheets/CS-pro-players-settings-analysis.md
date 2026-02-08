@@ -55,4 +55,6 @@ https://docs.google.com/spreadsheets/d/1otd8KRAk5ElqTTvsmugGTjlSEJ3xEcaluVVgdjNM
 
 ---
 
+## Dashboard
 
+![Dashboard](images/dashboard.png)
