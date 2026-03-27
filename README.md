@@ -18,32 +18,41 @@
 
 # Проєкти
 
-## Аналіз налаштувань PRO-гравців CS:GO / CS2 (Google Sheets)
+## **(POWER BI)** Аналіз продажів фітнес-обладнання
 
-📄 Опис проєкту  
-https://github.com/duckaar/portfolio/blob/main/Google_Sheets/CS-pro-players-settings-analysis.md
+![dashboard](Power%20BI/Gym%20Dashboard/visuals/clear.png)
 
-📊 Повна таблиця та дашборд 
-https://docs.google.com/spreadsheets/d/1otd8KRAk5ElqTTvsmugGTjlSEJ3xEcaluVVgdjNM61w/edit?gid=1821751720
+Файли проєкту  
+https://github.com/duckaar/portfolio/tree/main/Power%20BI/Gym%20Dashboard
 
-У цьому проєкті:
+У цьому проєкті було створено інтерактивний дашборд у Power BI для аналізу продажів фітнес-обладнання.
 
-- об’єднано дані з HLTV та бази налаштувань CS2 PRO-гравців
-- виконано очищення даних та об’єднання таблиць
-- проаналізовано зв’язок між eDPI, роздільною здатністю екрана та ігровою статистикою
-- створено дашборд у Google Sheets
+Що було зроблено:
+
+- побудовано data model (star schema)
+- створено ключові метрики (Revenue, Orders, Quantity, AOV, Avg Items per Order)
+- реалізовано time-based аналіз (Previous Month Revenue, Previous Month Orders)
+- використано DAX для створення calculated field та measures
+- реалізовано інтерактивні фільтри (Country, Year)
+- створено Field Parameter для перемикання метрик
+- додано drill-down (Category → Subcategory)
+- реалізовано popup-фільтри за допомогою bookmarks
+- створено навігацію між сторінками
+- налаштовано взаємодію між візуалами (Edit Interactions)
+- побудовано карту для аналізу географії продажів
 
 Основні висновки:
 
-- кореляція між eDPI та Rating слабка (r ≈ 0.16)
-- більшість PRO-гравців використовує нестандартну роздільність 1280×960
-- стандартні роздільності (1920×1080 / 2560×1440) використовуються значно рідше
+- поведінка клієнтів відрізняється між країнами (у США більше замовлень, у UK вищий середній чек)
+- бізнес значною мірою залежить від категорії Cardio Equipment
+- всередині категорій виручка розподілена між різними товарами, але окремі групи (наприклад Weight Machines) дають найбільший вклад
+- у кінці періоду спостерігається різке падіння показників, яке потребує додаткового аналізу
 
 ---
 
-## Аналіз процесу підтвердження замовлень та доставки (SQL + Power BI | PostgreSQL, DAX)
+## **(SQL + Power BI | PostgreSQL, DAX)** Аналіз процесу підтвердження замовлень та доставки 
 
-📄 Файли проєкту  
+Файли проєкту  
 https://github.com/duckaar/portfolio/tree/main/SQL/Brazilian_e_commerce
 
 У проєкті проаналізовано процес обробки замовлень у e-commerce датасеті Olist (Brazilian E-commerce dataset).
@@ -65,3 +74,32 @@ https://github.com/duckaar/portfolio/tree/main/SQL/Brazilian_e_commerce
 - на рівні окремих замовлень кореляція між відстанню та часом доставки слабка
 - після агрегування за діапазонами відстані видно логічну тенденцію: зі збільшенням відстані зростає середній час доставки
 - сегментація клієнтів дозволяє виділити ключові групи (Champions, At Risk тощо) для подальшого аналізу та маркетингових рішень
+
+---
+
+## **(GOOGLE SHEETS)** Аналіз налаштувань PRO-гравців CS:GO / CS2 
+
+![dashboard](Google_Sheets/images/dashboard.png)
+
+Опис проєкту  
+https://github.com/duckaar/portfolio/blob/main/Google_Sheets/CS-pro-players-settings-analysis.md
+
+Повна таблиця та дашборд 
+https://docs.google.com/spreadsheets/d/1otd8KRAk5ElqTTvsmugGTjlSEJ3xEcaluVVgdjNM61w/edit?gid=1821751720
+
+У цьому проєкті:
+
+- об’єднано дані з HLTV та бази налаштувань CS2 PRO-гравців
+- виконано очищення даних та об’єднання таблиць
+- проаналізовано зв’язок між eDPI, роздільною здатністю екрана та ігровою статистикою
+- створено дашборд у Google Sheets
+
+Основні висновки:
+
+- кореляція між eDPI та Rating слабка (r ≈ 0.16)
+- більшість PRO-гравців використовує нестандартну роздільність 1280×960
+- стандартні роздільності (1920×1080 / 2560×1440) використовуються значно рідше
+
+---
+
+
